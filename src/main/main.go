@@ -33,6 +33,8 @@ func main() {
 			filemgmt.CdCommand(args[1:])
 		case "ls":
 			filemgmt.LsCommand()
+		case "mkdir":
+			filemgmt.MkdirCommand(args[1])
 		default:
 			fmt.Printf("Unknown command: %s\n", args[0])
 		}

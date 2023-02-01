@@ -61,6 +61,16 @@ func LsCommand() {
 	}
 }
 
+func MkdirCommand(dirname string) {
+	err := os.Mkdir(dirname, 0755)
+
+	if err != nil {
+		fmt.Println("Error creating directory:", err)
+	} else {
+		fmt.Println("Directory created successfully.")
+	}
+}
+
 func changeDirectory(path string) error {
 	return os.Chdir(path)
 }
