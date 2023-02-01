@@ -67,8 +67,30 @@ func MkdirCommand(dirname string) {
 	if err != nil {
 		fmt.Println("Error creating directory:", err)
 	} else {
-		fmt.Println("Directory created successfully.")
+		fmt.Println("Created directory:", dirname)
 	}
+}
+
+func RmdirCommand(dirname string) {
+	err := os.RemoveAll(dirname)
+
+	if err != nil {
+		fmt.Println("Error removing directory:", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("Removed directory:", dirname)
+}
+
+func RmCommand(filename string) {
+	err := os.Remove(filename)
+
+	if err != nil {
+		fmt.Println("Error removing file:", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("Removed file:", filename)
 }
 
 func changeDirectory(path string) error {

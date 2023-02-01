@@ -35,6 +35,10 @@ func main() {
 			filemgmt.LsCommand()
 		case "mkdir":
 			filemgmt.MkdirCommand(args[1])
+		case "rmdir":
+			filemgmt.RmdirCommand(args[1])
+		case "rm":
+			filemgmt.RmCommand(args[1])
 		default:
 			fmt.Printf("Unknown command: %s\n", args[0])
 		}
