@@ -37,6 +37,8 @@ func main() {
 			filemgmt.MkdirCommand(args[1])
 		case "rmdir":
 			filemgmt.RmdirCommand(args[1])
+		case "mkfile":
+			filemgmt.MkfileCommand(args[1])
 		case "rm":
 			filemgmt.RmCommand(args[1])
 		default:
