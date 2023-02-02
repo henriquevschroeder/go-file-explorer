@@ -1,12 +1,12 @@
 package main
 
-import ( 
-    "fmt"
-    "os"
+import (
 	"bufio"
+	"fmt"
+	"os"
 	"strings"
-    
-    "go-file-explorer/src/filemgmt"
+
+	"go-file-explorer/src/commands"
 )
 
 func main() {
@@ -30,17 +30,17 @@ func main() {
 
 		switch args[0] {
 		case "cd":
-			filemgmt.CdCommand(args[1:])
+			commands.Cd(args[1:])
 		case "ls":
-			filemgmt.LsCommand()
+			commands.Ls()
 		case "mkdir":
-			filemgmt.MkdirCommand(args[1])
+			commands.Mkdir(args[1:])
 		case "rmdir":
-			filemgmt.RmdirCommand(args[1])
+			commands.Rmdir(args[1:])
 		case "mkfile":
-			filemgmt.MkfileCommand(args[1])
+			commands.Mkfile(args[1:])
 		case "rm":
-			filemgmt.RmCommand(args[1])
+			commands.Rm(args[1:])
 		default:
 			fmt.Printf("Unknown command: %s\n", args[0])
 		}
