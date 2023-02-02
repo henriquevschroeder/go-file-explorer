@@ -34,13 +34,13 @@ func main() {
 		case "ls":
 			commands.Ls()
 		case "mkdir":
-			commands.Mkdir(args[1])
+			commands.Mkdir(args[1:])
 		case "rmdir":
-			commands.Rmdir(args[1])
+			commands.Rmdir(args[1:])
 		case "mkfile":
-			commands.Mkfile(args[1])
+			commands.Mkfile(args[1:])
 		case "rm":
-			commands.Rm(args[1])
+			commands.Rm(args[1:])
 		default:
 			fmt.Printf("Unknown command: %s\n", args[0])
 		}
